@@ -1,8 +1,7 @@
 // postcss.config.cjs 
 module.exports = {
-  plugins: [
-    // 💡 ใช้รูปแบบ Array ของ String
-    require('tailwindcss'), 
-    require('autoprefixer'),
-  ],
-}
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
