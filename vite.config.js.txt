@@ -4,8 +4,10 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // 💡 Base Path สำคัญมากสำหรับการ Deploy Production
-  base: './', 
+  base: './', // เก็บไว้เพื่อแก้ปัญหา Path
   plugins: [react()],
-  // 💡 ไม่ต้องมีส่วน css: { postcss: ... } แล้ว
+  // 💡 ลบส่วน Build ที่เกี่ยวกับ CSS/PostCSS ทั้งหมด
+  build: {
+    outDir: 'dist', // Vercel จะใช้ค่านี้
+  }
 })
