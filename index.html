@@ -1,13 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="th">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>หลักเกษตร คุระบุรี</title>
-    </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หลักเกษตร คุระบุรี - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Sarabun', sans-serif;
+            margin: 0;
+            background-color: #f3f4f6; /* bg-gray-100 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        /* Card Container */
+        .auth-container {
+            width: 100%;
+            max-width: 448px; /* max-w-md */
+            padding: 2rem;
+            margin: auto;
+            background-color: white;
+            border-radius: 1rem; /* rounded-2xl */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+        }
+        /* Header */
+        .title {
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 800;
+            color: #047857; /* text-green-700 */
+            text-align: center;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .subtitle {
+            font-size: 1rem;
+            color: #4b5563; /* text-gray-600 */
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        /* Input & Button Base */
+        .input-field, .auth-button {
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid #d1d5db;
+            box-sizing: border-box;
+            margin-bottom: 1rem;
+            transition: all 150ms;
+        }
+        .input-field:focus {
+            border-color: #10b981;
+            box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+            outline: none;
+        }
+        /* Buttons */
+        .auth-button {
+            font-weight: 700;
+            color: white;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 6px -1px rgba(96, 165, 250, 0.3);
+            background-color: #3b82f6; /* bg-blue-500 */
+        }
+        .auth-button:hover {
+            opacity: 0.9;
+        }
+        .register-link {
+            display: block;
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #4b5563;
+            text-decoration: underline;
+        }
+        .register-link:hover {
+            color: #3b82f6;
+        }
+        .error-message {
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-align: center;
+            background-color: #fee2e2;
+            color: #b91c1c;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="title">
+            หลักเกษตร คุระบุรี
+            <span style="margin-left: 0.5rem; color: #059669;">🌿</span>
+        </div>
+        <div class="subtitle">เข้าสู่ระบบผู้ดูแลระบบ</div>
+        
+        <form id="auth-form">
+            <input type="email" id="email" class="input-field" placeholder="your.email@example.com" required>
+            <input type="password" id="password" class="input-field" placeholder="อย่างน้อย 6 ตัวอักษร" required minlength="6">
+            
+            <div id="auth-message" class="error-message" style="display: none;"></div>
+
+            <button type="submit" id="auth-submit" class="auth-button">
+                เข้าสู่ระบบ
+            </button>
+        </form>
+
+        <button id="toggle-mode" class="register-link">
+            ยังไม่มีบัญชี? ลงทะเบียนใหม่
+        </button>
+    </div>
+
+    <script>
+        // NOTE: ต้องเพิ่ม Firebase CDN และ Logic การเข้าสู่ระบบด้วย JavaScript ที่นี่
+        // แต่ตอนนี้หน้าจอจะสวยงามและแสดงผลถูกต้องแล้วค่ะ!
+    </script>
+</body>
 </html>
