@@ -1,0 +1,7 @@
+// vite.config.js
+// ...
+export default defineConfig({
+  base: './', // 👈 ต้องมี
+  plugins: [react()],
+  // ...
+})
