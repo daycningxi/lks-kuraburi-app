@@ -4,8 +4,8 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // 💡 เพิ่ม base: './' เพื่อให้ asset paths ถูกต้องใน Production
+  // 💡 Base Path สำคัญมากสำหรับการ Deploy Production
   base: './', 
   plugins: [react()],
-  // ... (โค้ดที่เหลือ)
+  // 💡 ไม่ต้องมีส่วน css: { postcss: ... } แล้ว
 })
