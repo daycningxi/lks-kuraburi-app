@@ -1,16 +1,10 @@
-// vite.config.js (ใช้ชื่อไฟล์ .js นะคะ)
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-
-// 💡 ไม่ต้อง require() หรือ import tailwindcss ที่นี่แล้ว
-// Vite จะโหลด PostCSS config ผ่านไฟล์ postcss.config.cjs ของเรา
-// หรือถ้าไม่มีไฟล์นั้น ก็ต้องใส่ตรงนี้
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // 💡 เพิ่มการตั้งค่า PostCSS ตรงนี้
-  css: {
-    postcss: './postcss.config.cjs', // 👈 ชี้ไปที่ไฟล์ config ของเราโดยตรง!
+   css: {
+    postcss: './postcss.config.cjs', 
   },
 })
