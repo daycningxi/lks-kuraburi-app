@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build:css": "postcss src/index.css -o src/temp.css",
-    "build": "npm run build:css && vite build",
+    "build": "vite build",  // 💡 กลับไปใช้ Build Command พื้นฐานของ Vite
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -26,6 +25,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.22",
     "globals": "^16.4.0",
+    // ❌ ลบ devDependencies ที่เหลือของ PostCSS/Tailwind ทิ้งไปให้หมด
     "vite": "^7.1.7"
   }
 }
