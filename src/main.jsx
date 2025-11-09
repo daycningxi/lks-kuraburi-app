@@ -3,9 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 
-// 💡 เปลี่ยนจาก import './index.css'; 
-// 💡 เป็น import Path สัมพัทธ์แบบเต็ม:
-import './src/index.css'; // <-- ลองใช้ Path แบบนี้แทน
+// 💡 แก้ Path ให้ชี้ตรงไปที่ index.css (เพราะอยู่ในโฟลเดอร์เดียวกัน)
+import './index.css'; 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
